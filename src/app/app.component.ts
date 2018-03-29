@@ -12,6 +12,6 @@ export class AppComponent  implements OnInit{
 	}
 
   ngOnInit() {
-  	this._headersService.setHeaders('Authorization', 'Bearer df843b77-443d-4241-a7dd-d92332e68383')
+  	this._headersService.setHeaders('Authorization', 'Bearer 720b96f7-0b8b-468d-94ba-59c769ae28de')
   }
 }

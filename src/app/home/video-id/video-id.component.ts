@@ -215,7 +215,7 @@ export class VideoIdComponent implements OnInit {
 		notification.className = not.type;
 		notification.innerHTML = not.message;
 		notification.classList.add('show')
-		setTimeout( ()=> { this.hideNotification() }, not.ttl);
+		not.ttl && setTimeout( ()=> { this.hideNotification() }, not.ttl);
 		
 
 	}
@@ -321,9 +321,9 @@ export class VideoIdComponent implements OnInit {
 	initTest(){
 	  this.eid.init({
 	    lang: 'en',
-	    token: 'df843b77-443d-4241-a7dd-d92332e68383',
-	    eidApi: 'https://server/v2/',
-	    proxyEndpoint: 'https://server/v2/',
+	    token: '720b96f7-0b8b-468d-94ba-59c769ae28de',
+	    eidApi: 'https://etrust-sandbox.electronicid.eu/v2/',
+	    proxyEndpoint: 'https://etrust-sandbox.electronicid.eu/v2/',
 	  }).then( (res)=>{
 	    this.videoId = this.eid.videoId('#videoElement');
 	    this.createParentNode( this.video) 
@@ -439,6 +439,15 @@ export class VideoIdComponent implements OnInit {
 	    			topLeft.classList.add('face');
 		    }
 		};
+
+		this.videoId.ui.onContextualHelp = ((phase) => {
+		    console.log("UI - Show contextual help for phase: " + phase.name);
+  			let help = document.querySelector('#help');
+  			let evObj = document.createEvent('Events');
+		    evObj.initEvent('click', true, false);
+		    help.dispatchEvent(evObj);
+		    phase.continue();
+		}).bind(this);
 
 		this.videoId.ui.onFaceDetectionAttempted = ((detection) => {
 		    console.log("UI - Face Detection: ", detection);

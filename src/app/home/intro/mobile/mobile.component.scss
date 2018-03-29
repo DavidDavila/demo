@@ -177,6 +177,7 @@
 
         }
         button {
+          display: block;
           cursor: pointer;
           margin: 40px auto 0px;
           outline: none;
@@ -185,7 +186,6 @@
           text-decoration: none;
           border: none;
           font-size: 15px;
-          display: inline-block;
           color: #fff;
           text-transform: uppercase;
           padding: 12px 30px;
