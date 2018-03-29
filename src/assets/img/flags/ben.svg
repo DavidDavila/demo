@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg height="1000"
+    viewBox="0 0 15 10"
+    width="1500"
+    xmlns="http://www.w3.org/2000/svg">
+    <rect
+        fill="#fcd116"
+        height="10"
+        id="Yellow"
+        width="15" />
+    <rect
+        fill="#e8112d"
+        height="5"
+        id="Red"
+        width="15"
+        y="5" />
+    <rect
+        fill="#008751"
+        height="10"
+        id="Green"
+        width="6" />
+</svg>

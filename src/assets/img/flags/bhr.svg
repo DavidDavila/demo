@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="900"
+    viewBox="0 0 150 90"
+    width="1500"
+    xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M0,0H150V90H0"
+        fill="#fff" />
+    <path
+        d="M150,0 37,0l23,9 -23,9 23,9 -23,9 23,9 -23,9 23,9 -23,9 23,9 -23,9H150"
+        fill="#ce1126" />
+</svg>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+    "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink"
+    height="480"
+    version="1.1"
+    viewBox="0 0 220 160"
+    width="660"
+    xmlns="http://www.w3.org/2000/svg">
+    <desc>Flag of Israel</desc>
+    <defs>
+        <!-- Specs are taken from "The Provisional Council of State Proclamation of
+          the Flag of the State of Israel," 25 Tishrei 5709 (28 October 1948)
+        For Magen David, the "Israel Science and Technology Homepage" at
+          http://www.science.co.il/Israel-flag.asp specifies each side as 60 cm.
+          Outer radius is then 30 / cos(30) = 20 * sqrt(3)
+        For equilateral triangles, middle radius = outer radius - width:
+          20 * sqrt(3) - 5.5
+        Coordinates for upward-pointing triangle relative to center are then:
+          (                            0,-(20*sqrt(3) - 5.5)          )
+          (-(20*sqrt(3) - 5.5) * cos(30), (20*sqrt(3) - 5.5) * sin(30))
+          ( (20*sqrt(3) - 5.5) * cos(30), (20*sqrt(3) - 5.5) * sin(30)) -->
+        <polygon
+            fill-opacity="0"
+            id="triangle"
+            points="0,-29.1410161513775421
+                -25.2368602791855814, 14.5705080756887710
+                 25.2368602791855814, 14.5705080756887710"
+            stroke="#0038b8"
+            stroke-width="5.5" />
+    </defs>
+    <!-- "The flag is 220 cm long and 160 cm wide.  The background is white" -->
+    <rect
+        fill="white"
+        height="160"
+        width="220" />
+    <!-- "...two stripes of dark sky-blue, 25 cm broad, over the whole length of
+      the flag, at a distance of 15 cm from the top and from the bottom..."
+      Legislation does not specify exact shade of blue; "#0038b8" is typical of
+      flags used in Israel -->
+    <rect
+        fill="#0038b8"
+        height="25"
+        width="220"
+        y="15" />
+    <rect
+        fill="#0038b8"
+        height="25"
+        width="220"
+        y="120" />
+    <use
+        transform="translate(110,80)"
+        xlink:href="#triangle" />
+    <use
+        transform="translate(110,80) rotate(180)"
+        xlink:href="#triangle" />
+</svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="550"
+    preserveAspectRatio="none"
+    viewBox="0 0 75 18"
+    width="1400"
+    xmlns="http://www.w3.org/2000/svg">
+    <rect
+        fill="#8d1b3d"
+        height="18"
+        width="75" />
+    <path
+        d="M22,18H0V0H22l6,1 -6,1 6,1 -6,1 6,1 -6,1 6,1 -6,1 6,1 -6,1 6,1 -6,1 6,1 -6,1 6,1 -6,1 6,1z"
+        fill="#fff" />
+</svg>

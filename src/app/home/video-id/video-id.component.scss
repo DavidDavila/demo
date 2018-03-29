@@ -1,0 +1,9 @@
+#videoElement{
+	height: 71vh;	
+    position: relative;
+    transition: filter 600ms;
+    &.blur{
+      filter: blur(5px);
+    }
+
+}

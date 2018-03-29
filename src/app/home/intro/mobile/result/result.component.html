@@ -1,0 +1,106 @@
+<section id="resultSection">
+  <mat-tab-group>
+    <mat-tab label="Biometrics">
+      <article id="article-biometrics">
+        <section class="background">
+        	<span>Similarity Level</span>
+        	<p>
+        		The result of the biometrics between the photo of the identification document and you is:
+        	</p>
+        	<div>        	
+	        	<img [src]=" 'data:image/jpg;base64,' + data?.video?.video?.biometrics?.face.image" alt="">
+	        	<h4>{{data?.video?.video?.biometrics?.face.similarityLevel}}</h4>
+	        	<img [src]=" 'data:image/jpg;base64,' + data?.video?.video?.document?.subject.photo" alt="">        		
+        	</div>
+        </section>
+        <div class="name">
+            {{data?.video?.video?.document?.subject?.primaryName }} {{data?.video?.video?.document?.subject?.secondaryName }}
+        </div>
+        <div class="body">
+        	<div class="first">
+        		<span>Personal ID</span>
+        		<p>
+        			{{data?.video?.video?.document?.subject?.personalNumber }}
+        		</p>
+        		<span>Date of bitrh</span>
+        		<p>
+        			{{data?.video?.video?.document?.subject?.birthDate | date: 'yy-mm-dd' }}
+        		</p>
+        		<span>Nationality</span>
+        		<p>
+        			{{data?.video?.video?.document?.subject?.nationality }}
+        		</p>	
+        	</div>
+        	<div class="second">
+        		<span>Document ID</span>
+        		<p>
+        			{{data?.video?.video?.document?.documentNumber }}
+        		</p>
+        		<span>Date of expiry</span>
+        		<p>
+        			{{data?.video?.video?.document?.expiryDate | date: 'yy-mm-dd' }}
+        		</p>
+        		<span>sex</span>
+        		<p>
+        			{{data?.video?.video?.document?.subject?.sex }}
+        		</p>	
+        	</div>
+        </div>
+      </article>
+    </mat-tab>
+    <mat-tab label="Front">
+      <article class="article-document">
+        <div>
+          <img *ngIf="data?.video?.video?.document?.scan" [src]="'data:image/jpg;base64,' + data?.video?.video?.document?.scan" alt="">
+          <img *ngIf="data?.video?.video?.document?.front" [src]="'data:image/jpg;base64,' + data?.video?.video?.document?.front" alt="">
+          <span *ngIf="data?.video?.video?.document?.front" [style.backgroundImage]="'url(data:image/jpg;base64,'+ data?.video?.video?.document?.front +')'" [ngClass]="{'show': hover}" class="chip">
+			</span >
+
+			<span *ngIf="data?.video?.video?.document?.scan" [style.backgroundImage]="'url(data:image/jpg;base64,'+ data?.video?.video?.document?.scan +')'" [ngClass]="{'show': hover}" class="chip">
+			</span >
+			<ng-container *ngFor="let item of frontFeatures">
+			  <i  *ngIf="frontFeature === item.name && item.found"  [ngStyle]="
+			      {
+			        'background-image': 'url(data:image/jpg;base64,'+ data?.video?.video?.document?.front +')',
+			        'top': item.bbox?.y / 1.5 + 'px',
+			        'left': item.bbox?.x / 1.5 + 'px',
+			        'width': item.bbox?.width / 1.5 + 'px',
+			        'height': item.bbox?.height / 1.5 + 'px',
+			        'background-position-x':  '-' + item.bbox?.x / 1.5 + 'px', 
+			        'background-position-y': '-' + item.bbox?.y / 1.5 + 'px'
+			      }">
+			  </i>
+			</ng-container>
+
+			<ng-container *ngFor="let item of frontFeatures">
+			  <i  *ngIf="frontFeature === item.name && item.found"  [ngStyle]="
+			      {
+			        'background-image': 'url(data:image/jpg;base64,'+ data?.video?.video?.document?.scan +')',
+			        'top': item.bbox?.y / 1.5 + 'px',
+			        'left': item.bbox?.x / 1.5 + 'px',
+			        'width': item.bbox?.width / 1.5 + 'px',
+			        'height': item.bbox?.height / 1.5 + 'px',
+			        'background-position-x':  '-' + item.bbox?.x / 1.5 + 'px', 
+			        'background-position-y': '-' + item.bbox?.y / 1.5 + 'px'
+			      }">
+			  </i>
+			</ng-container>
+			</div>
+			<ul (mouseleave)="hover = false" (mouseenter)="hover = true " >
+			  <ng-container  *ngFor="let item of frontFeatures" >
+				  <li (mouseout)="frontFeature = null" (mouseover)="frontFeature = item.name " *ngIf="item.found">			 
+				    {{item.name}}
+				  </li>
+			  </ng-container>
+			</ul>
+		</article>
+	  </mat-tab>
+	  <mat-tab label="Back">
+	  	<article class="article-document">	
+			<img [src]="'data:image/jpg;base64,' + (video$ | async).video?.document?.back" alt="">
+		</article>
+	  </mat-tab>
+	
+	</mat-tab-group>
+	
+</section>

@@ -1,0 +1,160 @@
+@-webkit-keyframes opacity {
+0% { 
+  opacity:0;
+}
+25% {
+  opacity:1;
+}
+75% {
+	opacity: 1;
+}
+100% {
+	opacity: 0;
+}
+}
+@-moz-keyframes opacity {
+0% { 
+ opacity:0;
+}
+25% {
+  opacity:1;
+}
+75% {
+	opacity: 1;
+}
+100% {
+	opacity: 0;
+}
+}
+@-o-keyframes opacity {
+0% { 
+  opacity:0;
+}
+25% {
+  opacity:1;
+}
+75% {
+	opacity: 1;
+}
+100% {
+	opacity: 0;
+}
+}
+@keyframes opacity {
+0% {
+  opacity:0;
+}
+25% {
+  opacity:1;
+}
+75% {
+	opacity: 1;
+}
+100% {
+	opacity: 0;
+}
+}
+
+
+
+
+
+@-webkit-keyframes imgAnim {
+0% { 
+  opacity:0;
+}
+100% {
+	opacity: 1;
+}
+}
+@-moz-keyframes imgAnim {
+0% { 
+ opacity:0;
+}
+100% {
+	opacity: 1;
+}
+}
+@-o-keyframes imgAnim {
+0% { 
+  opacity:0;
+}
+100% {
+	opacity: 1;
+}
+}
+@keyframes imgAnim {
+0% {
+  opacity:0;
+}
+100% {
+	opacity: 1;
+}
+}
+.biometrics {
+	display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    width: 11.2vh;
+    overflow: hidden;
+    border: 3px solid #fff;
+    height: 12vh;
+	img {
+		border-radius: 50%;
+		height: 100%;
+		-o-object-position: center;
+		object-position: center;
+		-o-object-fit: cover;
+		object-fit: cover;
+		width: 100%;
+		animation-name: imgAnim;
+		-webkit-animation-name: imgAnim;
+		-moz-animation-name: imgAnim;
+		-o-animation-name: imgAnim;
+		-webkit-animation-duration: 2000ms;
+		animation-duration: 2000ms;
+		animation-fill-mode: backwards;
+		animation-delay: 2000ms;
+	}
+	svg { 
+
+		animation-name: opacity;
+		-webkit-animation-name: opacity;
+		-moz-animation-name: opacity;
+		-o-animation-name: opacity;
+		-webkit-animation-duration: 2000ms;
+		animation-duration: 2000ms;
+		animation-fill-mode: forwards;
+	    position: absolute;
+	    left: 0;
+	    width: 100%;
+	    top: 0;
+	    height: calc(100% - 3px);
+	    line{
+	    	position: absolute;
+	    	left: 0;
+	    	width: 100%;
+	    	top: 0;
+	    	height: 100%;
+	    	stroke: rgba(181, 191, 3 ,0.4);
+	    	stroke-width: 1px;
+	    }
+	}
+	.point {		
+		animation-name: opacity;
+		-webkit-animation-name: opacity;
+		-moz-animation-name: opacity;
+		-o-animation-name: opacity;
+		-webkit-animation-duration: 2000ms;
+		animation-duration: 2000ms;
+		animation-fill-mode: forwards;
+		display: block;
+		position: absolute;
+		width: 4px;
+		height: 4px;
+		background: #fff;
+		border: 1px solid #b5bf03;
+		border-radius: 50%;
+		transform: translateX(-2px) translateY(-2px);
+	}
+}

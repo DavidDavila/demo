@@ -1,0 +1,384 @@
+@-webkit-keyframes opacity {
+0% { 
+  opacity:0;
+  width: 0%
+}
+100% {
+  opacity:1;
+  width: 100%;
+}
+}
+@-moz-keyframes opacity {
+0% { 
+ opacity:0;
+  width: 0%
+}
+100% {
+  opacity:1;
+  width: 100%;
+}
+}
+@-o-keyframes opacity {
+0% { 
+  opacity:0;
+  width: 0%
+}
+100% {
+  opacity:1;
+  width: 100%;
+}
+}
+@keyframes opacity {
+0% {
+  opacity:0;
+  width: 0%
+}
+100% {
+  opacity:1;
+  width: 100%;
+}
+}
+
+
+@-webkit-keyframes opacity {
+0% { 
+  opacity:0;
+  width: 0%
+}
+100% {
+  opacity:1;
+  width: 100%;
+}
+}
+@-moz-keyframes opacity {
+0% { 
+ opacity:0;
+  width: 0%
+}
+100% {
+  opacity:1;
+  width: 100%;
+}
+}
+@-o-keyframes opacity {
+0% { 
+  opacity:0;
+  width: 0%
+}
+100% {
+  opacity:1;
+  width: 100%;
+}
+}
+@keyframes opacity {
+0% {
+  opacity:0;
+  width: 0%
+}
+100% {
+  opacity:1;
+  width: 100%;
+}
+}
+
+
+
+#intro-section {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background: #fff;
+  height: 100vh;
+  z-index: 9;
+  overflow-x:hidden;
+   transition: all .4s cubic-bezier(1,.4,.4,1);
+  >article {
+    width: 50%;
+    float: left;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .4s cubic-bezier(1,.4,.4,1);						
+
+    &.text{    	
+    	width: 50%;
+    }
+    .features{
+      text-align: right;
+      padding: 4vw;
+      margin-top: 30px;
+      li{
+        width: 100%;
+        margin-bottom: 30px;
+        b{
+          color: #b9c210;
+          margin-bottom: 5px;
+          display: block;
+          font-weight: 400;
+          font-size: 17px;
+          padding-top: 10px;
+        }
+        p{
+          font-size: 14px;
+          max-width: 55%;
+          padding-bottom: 10px;
+          float: right;
+        }
+        .icon-container{
+          float: right;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 50px;
+          width: 50px;
+          margin: 0 0 0 27px; 
+          border-radius: 50%; 
+          border: 1px solid #b5bf03;  
+          /deep/ .mat-icon {
+            color: #b5bf03;             
+            padding-top: 10px;
+            text-align: center;           
+            width: 100%;
+            height: 100%;
+            font-size: 26px;
+          }          
+        }
+      }
+      &.features1 { 
+      }
+      &.features2 {
+        li{
+          b{
+            text-align: left; 
+          }
+          p{
+            text-align: left;
+            float: left;
+          }
+          .icon-container{
+            float: left;
+            margin: 0 27px 0 0; 
+
+          }
+        }
+      }
+    }
+    h1 {
+      width: 100%;
+      text-align: right;
+      font-size: 90px;
+      font-weight: 300;
+      line-height: 1;
+    	transition: all .4s cubic-bezier(1,.4,.4,1);
+      white-space: nowrap;
+      b {
+        display: block;
+        font-size: 110px;
+        font-weight: 900;
+      }
+    }
+  }
+  svg {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    mix-blend-mode: multiply;
+    #fill1 {
+         .stop1 {
+           stop-color: #efefef;
+         }
+         .stop2 {
+           stop-color: #fff;
+         }
+       }
+        #fill2 {
+       .stop1 {
+           stop-color: #eaef96;
+         }
+         .stop2 {
+           stop-color: rgb(191, 191, 3);
+         
+       }
+     }
+  }
+
+  #path1,
+  #path2 {
+    mix-blend-mode: multiply;
+  }
+  #path2 {
+    opacity: .7;
+  }
+  linearGradient {
+    stop {
+      transition: all .4s ease-in-out;
+    }
+  }
+  .section1 {
+
+  }
+  .section2 {
+    #fill1 {
+      .stop1 {
+        stop-color: #efefef;
+      }
+      .stop2 {
+        stop-color: #fff;
+      }
+    }
+    #fill2 {
+      .stop1 {
+          stop-color: rgb(141, 141, 0);
+        }
+        .stop2 {
+          stop-color: rgb(191, 191, 3);
+      }
+    }
+  }
+  .section3 {
+   #fill1 {
+        .stop1 {
+          stop-color: #efefef;
+        }
+        .stop2 {
+          stop-color: #fff;
+        }
+      }
+      #fill2{
+        .stop1 {
+          stop-color: rgb(81, 81, 1);
+        }
+        .stop2 {
+          stop-color: rgb(191, 191, 3);
+        }
+      }
+  }
+  .section4 {
+    #fill1 {
+        .stop1 {
+          stop-color: #efefef;
+        }
+        .stop2 {
+          stop-color: #efefef;
+        }
+    }
+    #fill2 {
+        .stop1 {
+          stop-color: #767c02;
+        }
+        .stop2 {
+          stop-color: rgb(191, 191, 3);
+        }
+    }    
+  }
+  .section5 {
+    #fill1 {
+        .stop1 {
+          stop-color: #efefef;
+        }
+        .stop2 {
+          stop-color: #efefef;
+        }
+    }
+    #fill2 {
+        .stop1 {
+          stop-color: #767c02;
+        }
+        .stop2 {
+          stop-color: rgb(191, 191, 3);
+        }
+    }
+    .section5 {
+      #fill1 {
+          .stop1 {
+            stop-color: #efefef;
+          }
+          .stop2 {
+            stop-color: #efefef;
+          }
+      }
+      #fill2 {
+          .stop1 {
+            stop-color: #767c02;
+          }
+          .stop2 {
+            stop-color: rgb(191, 191, 3);
+          }
+      }
+    }
+  }
+  &.small{  	
+    top: 0;    
+    width: 35%;
+    position: fixed;
+    background: #fff;
+    height: 100vh;   
+    z-index: 1;
+    >article {
+      width: 100%;
+      float: left;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      &.text{
+      	width: 0%;
+
+      }
+      h1 {    		
+      	opacity: 0;
+      	overflow: hidden;
+        b {
+          display: block;
+          font-size: 110px;
+          font-weight: 900;
+        }
+      }
+    }
+  }
+  &.center{     
+    width: 100%;
+    h2{
+     animation-name: opacity;
+     -webkit-animation-name: opacity;
+     -moz-animation-name: opacity;
+     -o-animation-name: opacity;
+     -webkit-animation-duration: 600ms;
+     animation-duration: 300ms;
+     animation-delay: 200ms;
+     width: 100%;
+     position: absolute;
+     text-align: center;
+     padding: 27px;
+     color: #fff;
+     right: 0;
+    }
+    ul{
+      animation-name: opacity;
+      -webkit-animation-name: opacity;
+      -moz-animation-name: opacity;
+      -o-animation-name: opacity;
+        animation-duration: 600ms;
+      animation-fill-mode: backwards;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      li{
+
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: auto;
+      }
+    }
+  }
+}

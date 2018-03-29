@@ -1,0 +1,79 @@
+<div id="mobile" [ngClass]="{'rotate': (currentSection$ | async) === 5}">
+  <div>
+    <div id="mobile-layer">
+      <div *ngIf="(currentSection$ | async) < 4">
+        <img src="assets/img/logo-big.png" alt="">
+        <h3>Start Now</h3>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <span class="input1">
+                <mat-form-field>
+                <mat-select [compareWith]="compareData" [panelClass]="{'select-document-layer': true}" placeholder="Country" [formControl]="countryValue">
+                    <mat-select-trigger>
+                        <ng-container *ngIf="countryValue.value">
+                            <img class="flag" [src]="'assets/img/flags/' +  countryValue.value[0]?.country + '.svg'">
+                            {{ countryValue.value[0]?.countryName}}
+                        </ng-container>
+                    </mat-select-trigger>           
+               
+                    <mat-option *ngFor="let result of videoIdList" [value]="result">
+                        <span class="country"><img class="flag" [src]="'assets/img/flags/' + result[0].country + '.svg'">{{result[0].countryName}}</span>
+        </mat-option>
+        </mat-select>
+        </mat-form-field>
+        </span>
+        <span [ngClass]="{'disabled' : !countryValue.value}" class="input2">
+                    <mat-form-field>
+                      <mat-select [compareWith]="compareData"  [panelClass]="{'select-document-layer': true}" placeholder="Document" [formControl]="documentValue">
+                        <mat-select-trigger class="trigger">
+                          <img class="flag" [src]="'assets/img/passport.png'" alt="" *ngIf=" documentValue.value?.type === 'Passport'">
+                          <img class="flag" [src]="'assets/img/driver-license.png'" alt="" *ngIf=" documentValue.value?.type === 'DriverLicense'">
+                          <img class="flag" [src]="'assets/img/idcard.png'" alt="" *ngIf=" documentValue.value?.type === 'IdCard'">{{ documentValue.value?.name}}            
+                        </mat-select-trigger>       
+                         {{documentValue.value?.countryName}}
+                          <mat-option *ngFor="let result of countryValue.value" [value]="result">
+                          <img class="flag" [src]="'assets/img/passport.png'" alt="" *ngIf="result.type === 'Passport'">
+                          <img class="flag" [src]="'assets/img/driver-license.png'" alt="" *ngIf="result.type === 'DriverLicense'">
+                          <img class="flag" [src]="'assets/img/idcard.png'" alt="" *ngIf="result.type === 'IdCard'">
+                          {{result.kind || result.name }}
+                        </mat-option>     
+                      </mat-select>
+                    </mat-form-field>
+                  </span>
+        <button (click)="startDemo()" [ngClass]="{'disabled': !documentValue.value}">Probar Demo</button>
+      </div>
+      <div *ngIf="(currentSection$ | async) === 4">
+        <img src="assets/img/logo-big.png" class="right" alt="">
+        <div class="bottom">
+          <h3>Scanning...
+                        <p>Siga las instrucciones del videoID</p>
+                    </h3>
+        </div>
+        <div id="frontMobile" *ngIf="(video$ | async).video?.document?.subject?.photo">
+          <img *ngIf="(video$ | async).video?.document?.subject?.photo" [src]="'data:image/jpg;base64,' + (video$ | async).video?.document?.subject?.photo" alt="">
+          <h4></h4>
+          <dl>
+            <dt>Personal Number</dt>
+            <dd>{{(video$ | async).video?.document?.subject?.personalNumber }}</dd>
+          </dl>
+        </div>
+        <div id="backMobile" *ngIf="(video$ | async).video?.document?.back">
+          <dl>
+            <dt>Name</dt>
+            <dd>{{(video$ | async).video?.document?.subject?.primaryName }}</dd>
+          </dl>
+          <dl>
+            <dt>Lastname</dt>
+            <dd>{{(video$ | async).video?.document?.subject?.secondaryName }}</dd>
+          </dl>
+        </div>
+      </div>
+      <div *ngIf="(currentSection$ | async) === 5" class="top">
+        <result></result>
+      </div>
+      <span id="particles-background" [ngClass]="{'show': (currentSection$ | async) === 4}">    
+            <particles *ngIf="width" [params]="myParams" [style]="myStyle"></particles>
+        </span>
+    </div>
+    <img src="assets/img/iphone.png" alt="" (load)="imgLoad($event)">
+  </div>
+</div>

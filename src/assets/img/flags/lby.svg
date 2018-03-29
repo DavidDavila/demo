@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="500"
+    width="1000"
+    xmlns="http://www.w3.org/2000/svg">
+    <rect
+        fill="#239E46"
+        height="500"
+        width="1000" />
+    <rect
+        fill="#000"
+        height="375"
+        width="1000" />
+    <rect
+        fill="#E70013"
+        height="125"
+        width="1000" />
+    <path
+        d="M544.2,205.8a54.3,54.3 0 1,0 0,88.4a62.5,62.5 0 1,1 0-88.4m-13.8 44.2l84.1-27.3-52 71.5v-88.4l52 71.5z"
+        fill="#FFF" />
+</svg>

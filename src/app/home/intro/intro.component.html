@@ -1,0 +1,77 @@
+<section id="intro-section" [ngClass]="{'small' : (currentSection$ | async) >= 4, 'center' : (currentSection$ | async) === 5}">
+
+	<article class="text">
+		<h1 (click)="configureBackground()">Welcome to the <b>VideoId Demo</b></h1>
+	</article>
+	<article>
+		<ul class="features features1"  *ngIf="(currentSection$ | async) === 5">
+			<li>
+				<span class="icon-container"><mat-icon>verified_user</mat-icon></span>
+				<b>Accurate OCR & MRZ Integrity Check</b>
+				<p>
+					Capture and extract data in real time improving trust and user experience and checks MRZ integrity. 
+				</p>
+			</li>
+			<li>
+				<span class="icon-container"><mat-icon>face</mat-icon></span>
+				<b>Face Biometrics Scoring</b>
+				<p>Integrates automatic biometric scoring between person face & id card face picture</p>
+			</li>
+			<li>
+				<span class="icon-container"><mat-icon>stars</mat-icon></span>
+				<b>Environment Control Quality</b>
+				<p>Algorithm control external variables of process such as: lightness conditions, camera quality and network quality</p>
+			</li>
+			<li>
+				<span class="icon-container"><mat-icon>visibility_off</mat-icon></span>
+				<b>Liveness Detection</b>
+				<p>Detects person is alive during ID process</p>
+			</li>
+			<li>
+				<span class="icon-container"><mat-icon>security</mat-icon></span>
+				<b>Registration Authority Application</b>
+				<p>Our app allows to increase from substantial level to highest level of security in 2 steps</p>
+			</li>
+			
+		</ul>	
+
+		<mobile></mobile>
+		<ul class="features features2" *ngIf="(currentSection$ | async) === 5">
+			<li>
+				<span class="icon-container"><mat-icon>videocam</mat-icon></span>
+				<b>VideoIDentification& Videoconference </b>
+				<p>Different technologies to different use cases</p>
+			</li>
+			<li>
+				<span class="icon-container"><mat-icon>language</mat-icon></span>
+				<b>Universal Solution</b>
+				<p>Any Device, Any Country, Any channel</p>
+			</li>
+			<li>
+				<span class="icon-container"><mat-icon>language</mat-icon></span>
+				<b>Real Time</b>
+				<p>Lorem</p>
+			</li>
+			<li>
+				<span class="icon-container"><mat-icon>language</mat-icon></span>
+				<b>Agent Verification</b>
+				<p>Lorem</p>
+			</li>
+		</ul>
+	</article>
+	<svg id="pieces" [ngClass]="'section' + (currentSection$ | async)">
+	  <defs>
+	    <linearGradient id="fill1">
+	      <stop class="stop1" offset="0%"></stop>
+	      <stop class="stop2" offset="100%"></stop>
+	    </linearGradient>
+	    <linearGradient id="fill2">
+	      <stop class="stop1" offset="0%"></stop>
+	      <stop class="stop2" offset="100%"></stop>
+	    </linearGradient>
+	  </defs>
+	  <polygon id="path1" [attr.points]="points[0]" fill="url(#fill1)"></polygon>
+	  <polygon id="path2" [attr.points]="points[1]" fill="url(#fill2)"></polygon>
+	</svg>
+	
+</section>

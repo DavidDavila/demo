@@ -1,0 +1,23 @@
+<section class="biometrics">
+	<img [src]=" 'data:image/jpg;base64,' + photo" alt="">
+	<div>
+	<ng-container *ngFor="let item of htmlPoints">
+		<span class="point" *ngIf="height && width"  [ngStyle]="
+	            {
+	              'top': item.y * 150 / height + 'px',
+	              'left': item.x * 150 / width + 'px'
+	            }"></span>
+	</ng-container>
+	<svg >
+		<ng-container *ngFor="let item of htmlLines">		
+			  <line 
+			  	[attr.x1]="item.x1" 
+			  	[attr.y1]="item.y1" 
+			  	[attr.x2]="item.x2" 
+			  	[attr.y2]="item.y2"
+			  	/>
+			  Sorry, your browser does not support inline SVG.
+	</ng-container>
+	</svg>
+	</div> 
+</section>

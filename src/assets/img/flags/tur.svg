@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="800"
+    width="1200"
+    xmlns="http://www.w3.org/2000/svg">
+    <rect
+        fill="#E30A17"
+        height="800"
+        width="1200" />
+    <circle
+        style="fill:#ffffff"
+        cx="425"
+        cy="400"
+        r="200" />
+    <circle
+        style="fill:#E30A17"
+        cx="475"
+        cy="400"
+        r="160" />
+    <polygon
+        style="fill:#ffffff"
+        points="583.334,400 764.235,458.779 652.431,304.894 652.431,495.106 764.235,341.221" />
+</svg>

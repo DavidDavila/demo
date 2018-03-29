@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="800"
+    id="Flag of Poland"
+    viewBox="0 0 16 10"
+    width="1280"
+    xmlns="http://www.w3.org/2000/svg">
+    <rect
+        fill="#fff"
+        height="10"
+        width="16" />
+    <rect
+        fill="#dc143c"
+        height="5"
+        width="16"
+        y="5" />
+</svg>

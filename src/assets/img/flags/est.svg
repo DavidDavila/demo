@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="630"
+    width="990"
+    xmlns="http://www.w3.org/2000/svg">
+    <rect
+        fill="#4891d9"
+        height="630"
+        id="blue"
+        width="990" />
+    <rect
+        fill="#000"
+        height="420"
+        id="black"
+        width="990"
+        y="210" />
+    <rect
+        fill="#fff"
+        height="210"
+        id="white"
+        width="990"
+        y="420" />
+</svg>

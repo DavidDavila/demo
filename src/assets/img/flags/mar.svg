@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="600"
+    width="900"
+    xmlns="http://www.w3.org/2000/svg">
+    <rect
+        fill="#c1272d"
+        height="600"
+        width="900" />
+    <path
+        d="M450,224.312 494.469,361.187 378.063,276.625H521.938L405.531,361.187z"
+        fill="none"
+        stroke="#006233"
+        stroke-width="14.63" />
+</svg>
